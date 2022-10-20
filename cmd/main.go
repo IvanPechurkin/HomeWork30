@@ -8,12 +8,14 @@ import (
 	"net/http"
 )
 
-const (
-	port1 = ":8080"
-	port2 = ":8082"
-)
-
 func main() {
+	fmt.Println("Какой первый порт создаем")
+	port1 := ""
+	fmt.Scan(&port1)
+	fmt.Println("Какой второй порт создаем")
+	port2 := ""
+	fmt.Scan(&port2)
+
 	config1 := utils.Configuration{
 		Database: utils.DatabaseSetting{
 			Url:        "mongodb://localhost:27017",
